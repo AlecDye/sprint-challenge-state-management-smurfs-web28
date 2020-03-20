@@ -3,6 +3,15 @@ import { connect } from "react-redux";
 import { getData, postData } from "../actions";
 
 const SmurfForm = props => {
+  //     const [state, setState] = useState(inputState = {
+  //         name: "", age: 0, height: ""
+  //     })
+
+  //   const handleInputChange = e => {
+  //       e.preventDefault()
+  //       {}
+  //   }
+
   const [name, setName] = useState("");
   const handleNameChange = e => {
     e.preventDefault();
