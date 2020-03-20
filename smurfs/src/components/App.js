@@ -7,7 +7,10 @@ import SmurfList from "./SmurfList";
 const App = () => {
   return (
     <div className="App">
-      <h1>Big Papa Smurf's 2020 Census</h1>
+      <h1>Big Papa Smurf's Big List o' Smurfs</h1>
+      <p>By Big Papa Smurf</p>
+      <SmurfForm />
+      <SmurfList />
     </div>
   );
 };

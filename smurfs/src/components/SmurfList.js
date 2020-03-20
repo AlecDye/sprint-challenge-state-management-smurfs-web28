@@ -1,7 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
+import SmurfCard from "./SmurfCard";
 
-const SmurfList = () => {
-  return <></>;
+const SmurfList = props => {
+  console.log("SmurfList", props);
+  return (
+    <>
+      <div>
+        {props.smurfList.map(smurf => (
+          <SmurfCard key={smurf.id} smurf={smurf} />
+        ))}
+      </div>
+    </>
+  );
 };
 
-export default SmurfList;
+const mapStateToProps = state => {
+  return {
+    smurfList: state.smurfList
+  };
+};
+
+export default connect(mapStateToProps, {})(SmurfList);
